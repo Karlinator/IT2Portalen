@@ -19,5 +19,5 @@ function o() {
 
 function test() {
   var lol = "Dette er en test";
-  console.log(lol);
+  console.log("Dette er enda en ny test");
 }
