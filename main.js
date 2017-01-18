@@ -1,3 +1,4 @@
+/*global console*/
 function $(i) {
     "use strict";
     return document.querySelector(i);
