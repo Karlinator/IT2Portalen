@@ -10,3 +10,7 @@ function helloWorld() {
     "use strict";
     console.log("hello world");
 }
+
+function o() {
+  
+}
