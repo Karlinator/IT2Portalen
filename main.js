@@ -12,5 +12,12 @@ function helloWorld() {
 }
 
 function o() {
-  
+
+}
+
+
+
+function test() {
+  var lol = "Dette er en test";
+  console.log(lol);
 }
