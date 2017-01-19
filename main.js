@@ -6,5 +6,7 @@ function $(i) {
 document.addEventListener('DOMContentLoaded', function () {
     "use strict";
 });
-
-// Access an element? use:  $(".element")
+function helloWorld() {
+    "use strict";
+    console.log("hello world");
+}

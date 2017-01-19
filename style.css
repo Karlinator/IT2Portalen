@@ -1,16 +1,3 @@
 body{
 
 }
-
-.container {
-    width: 1440px;
-    height: auto;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0px 25px;
-    background-color: #22c;
-}
-
-.content {
-    background-color: #fff;
-}
