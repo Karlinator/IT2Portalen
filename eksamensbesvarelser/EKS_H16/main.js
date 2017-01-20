@@ -1,3 +1,4 @@
+
 window.onload = startup;
 
 var debug = true;
