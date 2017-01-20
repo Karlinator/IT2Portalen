@@ -65,3 +65,10 @@ body {
     padding-bottom: 30px;
     font-size: 18px;
 }
+
+.matkasse {
+  width: 300px;
+  height: 200px;
+  background-color: blue;  
+  float: left;
+}
