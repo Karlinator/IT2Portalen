@@ -3,7 +3,7 @@ window.onload = startup;
 var debug = true;
 
 function startup() {
-
+    update();
     listenForChange();
 }
 
@@ -33,6 +33,18 @@ function validate() {
     }
 }
 
+function updateImg () {
+    var img = document.getElementById('bilde');
+
+    var dropdownNumDinners = document.getElementById('numDinners').value;
+
+    if (dropdownNumDinners == 2) {
+        img.src = "2middager.jpg";
+    } else {
+        img.src = "3middager.jpg";
+    }
+}
+
 function calculatePrice() {
     var itemPrice, pricePrUnit;
 
@@ -58,9 +70,11 @@ function update() {
 
     validation = validate();
 
+    updateImg();
+
     if (validation) {
 
-        var printedPrise = document.getElementById('printedPrise');
+        var printedPrise = document.getElementById('printedPrice');
 
         printedPrise.innerHTML = price;
     }

@@ -2,7 +2,7 @@ body {
     margin: 0px;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 18px;
-    color: #444;
+    color: #000;
 }
 
 .nav {
@@ -55,9 +55,12 @@ body {
 }
 
 .wrap {
-    max-width: 960px;
+    max-width: 325px;
     padding: 0 15px;
     margin: 0 auto;
+    margin-top: 25px;
+    min-height: 700px;
+
 }
 
 .content {
@@ -67,14 +70,57 @@ body {
 }
 
 .matkasse {
-  width: 400px;
-  min-height: 500px;
-  height: auto;
-  float: left;
+    width: 325px;
+    min-height: 500px;
+    margin: 0 auto;
+
+    height: auto;
+    float: left;
+    background-image: url(images/block-paper.png);
+    padding: 0px 25px 25px 25px;
+    border-radius: 20px;
+}
+
+.matkasse h1 {
+  font-weight: 500;
 }
 
 .matkasse .field {
-  width: auto;
-  height: 20px;
-  margin: 0px 5px;
+    width: 100px;
+    margin: 0px 5px;
+}
+
+.discountTag {
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.price {
+
+    font-size: 3.5em;
+}
+
+.btn {
+    letter-spacing: 1px;
+    padding: 8px 25px 5px;
+    transition: all .2s ease-in;
+    border-radius: 3px;
+    color: #FFF;
+    background: #ff8d6b;
+    box-shadow: 0 3px 0 0 #b26047;
+    border-color: transparent;
+    font-weight: normal;
+    font-size: 1em;
+    width: 200px;
+
+}
+
+.btn:hover {
+    color: #000;
+    letter-spacing: 1px;
+    font-size: 18px;
+    background: #f7a489;
+    box-shadow: 0 3px 0 0 #b17461;
+    border-color: transparent;
+    padding: 8px 25px 5px;
 }

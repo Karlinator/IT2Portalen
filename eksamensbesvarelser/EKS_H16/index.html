@@ -14,24 +14,34 @@
     <div class="container">
         <div class="wrap">
             <div class="matkasse">
-                <h1 class="heading_h1">Matkasse</h1>
-                <h3 class="heading_h3">Velg type</h3>
+                <center>
+                    <h1 class="heading_h1">Matkasse</h1>
 
-                <img id="bilde" src="images/2middager.jpg" alt="Fant ikke bildefilen" width="300px;">
-                <br><br>
+                    <img id="bilde" src="images/2middager.jpg" alt="Fant ikke bildefilen" width="300px;">
+                    <br><br>
+                </center>
 
                 <!-- select number of dinners -->
+                Antall middager:
                 <select id="numDinners" class="field" name="Antall middager">
-            <option value="2">2 Middager</option>
-            <option value="3">3 Middager</option>
-          </select>
+                    <option value="2">2 Middager</option>
+                    <option value="3">3 Middager</option>
+                </select>
                 <br>
                 <!-- select number of persons -->
-                <input id="numPersons" class="field" type="number" name="Antall personer" value="1">
-<br>
-                <span id="printedPrise">0</span> NOK
+                Antall personer:
+                <input id="numPersons" class="field" type="number" name="Antall personer" value="1" placeholder="personer">
                 <br>
-                <button id="btnOK">Bestill</button>
+                <br>
+                <center>
+                    <span class="discountTag"><b>Akkuratt nå - 10% rabatt!</b><br>
+                  *Gjelder bestillinger for 5 eller flere personer.</span>
+                    <div class="price">
+                        <span id="printedPrice">0</span>,-
+                    </div>
+                    <br>
+                    <button class="btn">Bestill</button>
+                </center>
             </div>
 
         </div>
