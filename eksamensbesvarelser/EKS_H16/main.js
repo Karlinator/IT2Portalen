@@ -38,7 +38,7 @@ function calculate() {
             laks += 200 * ordersThisWeek[i].children + 300 * ordersThisWeek[i].youth + 350 * ordersThisWeek[i].adults;
         }
     }
-    $("#calculator").insertAdjacentHTML('beforeend', '<h4>Krabbe' + krabbe + ' Torsk: ' + torsk + ' Laks: ' + laks);
+    $("#result").innerHTML = '<h4>Krabbe: ' + krabbe + 'g Torsk: ' + torsk + 'g Laks: ' + laks + 'g';
 
 }
 document.addEventListener('DOMContentLoaded', function () {
