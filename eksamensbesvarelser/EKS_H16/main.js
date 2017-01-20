@@ -30,8 +30,15 @@ function filterWeek(obj) {
 }
 function calculate() {
     "use strict";
-    var ordersThisWeek = orders.filter(filterWeek);
-    if (debug) {console.log(ordersThisWeek[0]); }
+    var ordersThisWeek = orders.filter(filterWeek), i = 0, krabbe = 0, torsk = 0, laks = 0;
+    for (i; i < ordersThisWeek.length; i += 1) {
+        krabbe += 300 * ordersThisWeek[i].children + 500 * ordersThisWeek[i].youth + 600 * ordersThisWeek[i].adults;
+        torsk += 200 * ordersThisWeek[i].children + 300 * ordersThisWeek[i].youth + 350 * ordersThisWeek[i].adults;
+        if (ordersThisWeek[i].dinners === '3') {
+            laks += 200 * ordersThisWeek[i].children + 300 * ordersThisWeek[i].youth + 350 * ordersThisWeek[i].adults;
+        }
+    }
+    $("#calculator").insertAdjacentHTML('beforeend', '<h4>Krabbe' + krabbe + ' Torsk: ' + torsk + ' Laks: ' + laks);
 
 }
 document.addEventListener('DOMContentLoaded', function () {
