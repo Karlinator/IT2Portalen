@@ -67,8 +67,9 @@ body {
 }
 
 .matkasse {
-  width: 300px;
-  height: 200px;
-  background-color: blue;  
+  width: 400px;
+  min-height: 500px;
+  height: auto;
+  background-color: blue;
   float: left;
 }
