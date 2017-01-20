@@ -84,8 +84,10 @@ function update() {
 
 function save() {
 
-    var name = prompt("Fornavn & Etternavn");
-    var address = prompt("Addresse");
+    var firstname = prompt("Fakureringsinfo: Fornavn");
+    var lastname = prompt("Fakureringsinfo: Etternavn");
+
+    var address = prompt("Fakureringsinfo: Addresse");
 
     var numPersons = document.getElementById('numPersons').value;
 
@@ -94,8 +96,9 @@ function save() {
     sessionStorage.price = calculatePrice();
     sessionStorage.numPersons = numPersons;
     sessionStorage.numDinners = numDinners;
-    sessionStorage.name = name;
+    sessionStorage.firstname = firstname;
+    sessionStorage.lastname = lastname;
     sessionStorage.address = address;
-    
+
     window.location.href = 'review.html';
 }

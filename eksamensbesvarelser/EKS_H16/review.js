@@ -14,16 +14,8 @@ function loadEntries() {
     var numDinners = sessionStorage.numDinners;
     var numPersons = sessionStorage.numPersons;
     var price = sessionStorage.price;
-    var firstname;
-    var lastname;
-
-    var name = sessionStorage.name;
-    var res = name.split(" ");
-    firstname = res[0];
-
-    res.splice(0);
-    lastname = res.join(" ");
-
+    var firstname = sessionStorage.firstname;
+    var lastname = sessionStorage.lastname;
     var address = sessionStorage.address;
 
 
@@ -32,7 +24,7 @@ function loadEntries() {
     if (debug) console.log("Enter function 'loadEntries'");
 }
 
-function updateHTML(numPersons, numDinners, price, name, address) {
+function updateHTML(numPersons, numDinners, price, firstname, lastname, address) {
     document.getElementById('numDinners').innerHTML = numDinners;
     document.getElementById('numPersons').innerHTML = numPersons;
     document.getElementById('price').innerHTML = price;
