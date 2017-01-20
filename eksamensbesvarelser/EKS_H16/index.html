@@ -10,7 +10,7 @@
     <script src="main.js"></script>
 </head>
 <body>
-    <div class="registerDinners">
+    <div id="registerDinners">
         Uke nr. <input type="number" id="week"><br>
         Middager: <select id="dinners">
             <option value="2">2</option>
@@ -21,7 +21,7 @@
         Voksne: <input type="number" id="adults"><br>
         <button id="addButton" onclick="addRow()">Legg til</button>
     </div>
-    <div class="dinnerTable">
+    <div id="dinnerTable">
         <table>
             <tr>
                 <th>Uke nr.</th>
@@ -32,5 +32,9 @@
             </tr>
         </table>
     </div>
+    <div id="calculator">
+        Beregn nødvendig råvarer for uke: <input type="number" id="calculatorWeek" value="26"> <button id="calculate" onclick="calculate()">Beregn!</button>
+    </div>
+    <div id="result"></div>
 </body>
 </html>

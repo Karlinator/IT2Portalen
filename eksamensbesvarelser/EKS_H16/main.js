@@ -9,7 +9,7 @@ function $(i) {
 }
 function updateTable(newOrder) {
     "use strict";
-    $(".dinnerTable table").insertAdjacentHTML('beforeend', '<tr><td>' + newOrder.week + '</td><td>' + newOrder.dinners + '</td><td>' + newOrder.children + '</td><td>' + newOrder.youth + '</td><td>' + newOrder.adults + '</td></tr>');
+    $("#dinnerTable table").insertAdjacentHTML('beforeend', '<tr><td>' + newOrder.week + '</td><td>' + newOrder.dinners + '</td><td>' + newOrder.children + '</td><td>' + newOrder.youth + '</td><td>' + newOrder.adults + '</td></tr>');
 }
 function addRow() {
     "use strict";
@@ -23,6 +23,23 @@ function addRow() {
     newOrder = {'week': week, 'dinners': dinners, 'children': children, 'youth': youth, 'adults': adults};
     orders.push(newOrder);
     updateTable(newOrder);
+}
+function filterWeek(obj) {
+    "use strict";
+    return obj.week === '26';
+}
+function calculate() {
+    "use strict";
+    var ordersThisWeek = orders.filter(filterWeek), i = 0, krabbe = 0, torsk = 0, laks = 0;
+    for (i; i < ordersThisWeek.length; i += 1) {
+        krabbe += 300 * ordersThisWeek[i].children + 500 * ordersThisWeek[i].youth + 600 * ordersThisWeek[i].adults;
+        torsk += 200 * ordersThisWeek[i].children + 300 * ordersThisWeek[i].youth + 350 * ordersThisWeek[i].adults;
+        if (ordersThisWeek[i].dinners === '3') {
+            laks += 200 * ordersThisWeek[i].children + 300 * ordersThisWeek[i].youth + 350 * ordersThisWeek[i].adults;
+        }
+    }
+    $("#result").innerHTML = '<h4>Krabbe: ' + krabbe + 'g Torsk: ' + torsk + 'g Laks: ' + laks + 'g';
+
 }
 document.addEventListener('DOMContentLoaded', function () {
     "use strict";
