@@ -8,9 +8,9 @@ Programmer brukt i denne oppgaven:
 
 
 Adobe Premier Pro ble brukt til å sette sammen de forskjellige mediefilene til en film. 
-Filmen ble lagret som en mp4-fil fordi dette er en av de mest brukte filformatene for videoer på nett. 
-Lyd og film filene blir her seperat komprimert i henholdsvis MPEG-4 og ACC. 
-Dette gjør at filmen er lettere for nettleseren å håndtere. 
+Filmen ble lagret som en mp4-fil fordi dette er et av de mest brukte filformatene for videoer på nett. 
+Lyd og film blir her komprimert hver for seg i henholdsvis MPEG-4 og ACC. 
+Dette gjør at filen er liten og filmen er lettere for nettleseren å håndtere. 
 
 Brackets og Atom ble brukt til koding. 
 
