@@ -39,9 +39,9 @@ function updateImg () {
     var dropdownNumDinners = document.getElementById('numDinners').value;
 
     if (dropdownNumDinners == 2) {
-        img.src = "2middager.jpg";
+        img.src = "images/2middager.jpg";
     } else {
-        img.src = "3middager.jpg";
+        img.src = "images/3middager.jpg";
     }
 }
 
@@ -66,7 +66,6 @@ function update() {
     var price, validation;
 
     price = calculatePrice();
-    console.log(price);
 
     validation = validate();
 
