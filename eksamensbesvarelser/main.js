@@ -19,5 +19,4 @@ function addRow() {
 }
 document.addEventListener('DOMContentLoaded', function () {
     "use strict";
-    $("#add").addEventListener('click', addRow());
 });
