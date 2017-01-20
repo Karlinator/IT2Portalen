@@ -7,6 +7,10 @@ function $(i) {
     "use strict";
     return document.querySelector(i);
 }
+function updateTable(newOrder) {
+    "use strict";
+    $(".dinnerTable table").insertAdjacentHTML('beforeend', '<tr><td>' + newOrder.week + '</td><td>' + newOrder.dinners + '</td><td>' + newOrder.children + '</td><td>' + newOrder.youth + '</td><td>' + newOrder.adults + '</td></tr>');
+}
 function addRow() {
     "use strict";
     var week, dinners, children, youth, adults, newOrder;
@@ -18,6 +22,7 @@ function addRow() {
     if (debug) {console.log(week); }
     newOrder = {'week': week, 'dinners': dinners, 'children': children, 'youth': youth, 'adults': adults};
     orders.push(newOrder);
+    updateTable(newOrder);
 }
 document.addEventListener('DOMContentLoaded', function () {
     "use strict";
