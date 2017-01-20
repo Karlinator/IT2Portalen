@@ -24,9 +24,9 @@ function addRow() {
     orders.push(newOrder);
     updateTable(newOrder);
 }
-function filterWeek(i) {
+function filterWeek(obj) {
     "use strict";
-    return i.week === 26;
+    return obj.week === '26';
 }
 function calculate() {
     "use strict";
