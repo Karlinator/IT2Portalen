@@ -10,11 +10,12 @@ function startup() {
 // Function listening for changes.
 function listenForChange() {
     var dropdownNumDinners = document.getElementById('numDinners');
-
     var numPersons = document.getElementById('numPersons');
+    var btn = document.getElementById('btn');
 
     dropdownNumDinners.addEventListener("change", update);
     numPersons.addEventListener("change", update);
+    btn.addEventListener("click", save);
 
 
 
@@ -26,14 +27,14 @@ function validate() {
 
     var numPersons = document.getElementById('numPersons').value;
 
-    if (numPersons >= 10 || numPersons < 1) {
+    if (numPersons > 10 || numPersons < 1) {
         window.alert("Velg middag for et antall personer mellom 1 - 10");
     } else {
         return true;
     }
 }
 
-function updateImg () {
+function updateImg() {
     var img = document.getElementById('bilde');
 
     var dropdownNumDinners = document.getElementById('numDinners').value;
@@ -51,7 +52,7 @@ function calculatePrice() {
     var numPersons = document.getElementById('numPersons').value;
     var selectedOptNumDinners = document.getElementById('numDinners').value;
 
-    if (numPersons <= 5) {
+    if (numPersons >= 5) {
         pricePrUnit = 70;
     } else {
         pricePrUnit = 80;
@@ -79,4 +80,22 @@ function update() {
     }
 
     if (debug) console.log("Enter function 'update'");
+}
+
+function save() {
+
+    var name = prompt("Fornavn & Etternavn");
+    var address = prompt("Addresse");
+
+    var numPersons = document.getElementById('numPersons').value;
+
+    var numDinners = document.getElementById('numDinners').value;
+
+    sessionStorage.price = calculatePrice();
+    sessionStorage.numPersons = numPersons;
+    sessionStorage.numDinners = numDinners;
+    sessionStorage.name = name;
+    sessionStorage.address = address;
+    
+    window.location.href = 'review.html';
 }

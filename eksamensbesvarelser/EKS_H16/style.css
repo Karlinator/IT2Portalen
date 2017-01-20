@@ -124,3 +124,8 @@ body {
     border-color: transparent;
     padding: 8px 25px 5px;
 }
+
+.btn:active {
+    background: #d08871;
+    box-shadow: 0 3px 0 0 #774e41;
+}
