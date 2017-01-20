@@ -1,5 +1,3 @@
-<<<<<<< Updated upstream
-
 window.onload = startup;
 
 var debug = true;
