@@ -70,6 +70,11 @@ body {
   width: 400px;
   min-height: 500px;
   height: auto;
-  background-color: blue;
   float: left;
+}
+
+.matkasse .field {
+  width: auto;
+  height: 20px;
+  margin: 0px 5px;
 }
