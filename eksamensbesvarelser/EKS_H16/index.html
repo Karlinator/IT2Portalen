@@ -10,6 +10,27 @@
     <script src="main.js"></script>
 </head>
 <body>
-
+    <div class="registerDinners">
+        Uke nr. <input type="number" id="week"><br>
+        Middager: <select id="dinners">
+            <option value="2">2</option>
+            <option value="3">3</option>
+        </select><br>
+        Barn: <input type="number" id="children"><br>
+        Ungdom: <input type="number" id="youth"><br>
+        Voksne: <input type="number" id="adults"><br>
+        <button id="addButton" onclick="addRow()">Legg til</button>
+    </div>
+    <div class="dinnerTable">
+        <table>
+            <tr>
+                <th>Uke nr.</th>
+                <th>Antall Middager</th>
+                <th>Barn</th>
+                <th>Ungdom</th>
+                <th>Voksne</th>
+            </tr>
+        </table>
+    </div>
 </body>
 </html>
