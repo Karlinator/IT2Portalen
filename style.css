@@ -66,7 +66,17 @@ a {
     color: #fff;
 }
 
-.heading_background {
+.heading_background_index {
+    height: 225px;
+    background-image: url(images/pattern_green_circles.svg);
+}
+
+.heading_background_archive {
+    height: 225px;
+    background-image: url(images/pattern_blue_circles.svg);
+}
+
+.heading_background_index {
     height: 225px;
     background-image: url(images/pattern_circles.svg);
 }
