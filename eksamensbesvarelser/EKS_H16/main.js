@@ -1,29 +1,9 @@
-window.onload = startup;
-
+/*global console, prompt*/
 var debug = true;
 
-function startup() {
-    update();
-    listenForChange();
-}
-
-// Function listening for changes.
-function listenForChange() {
-    var dropdownNumDinners = document.getElementById('numDinners');
-    var numPersons = document.getElementById('numPersons');
-    var btn = document.getElementById('btn');
-
-    dropdownNumDinners.addEventListener("change", update);
-    numPersons.addEventListener("change", update);
-    btn.addEventListener("click", save);
-
-
-
-    if (debug) console.log("Enter function 'listenForChange'");
-}
-
 function validate() {
-    if (debug) console.log("Enter function 'validate'." + " Validation passed");
+    "use strict";
+    if (debug) {console.log("Enter function 'validate'." + " Validation passed"); }
 
     var numPersons = document.getElementById('numPersons').value;
 
@@ -35,11 +15,12 @@ function validate() {
 }
 
 function updateImg() {
-    var img = document.getElementById('bilde');
+    "use strict";
+    var img = document.getElementById('bilde'),
 
-    var dropdownNumDinners = document.getElementById('numDinners').value;
+        dropdownNumDinners = document.getElementById('numDinners').value;
 
-    if (dropdownNumDinners == 2) {
+    if (dropdownNumDinners === 2) {
         img.src = "images/2middager.jpg";
     } else {
         img.src = "images/3middager.jpg";
@@ -47,10 +28,11 @@ function updateImg() {
 }
 
 function calculatePrice() {
-    var itemPrice, pricePrUnit;
+    "use strict";
+    var itemPrice, pricePrUnit,
 
-    var numPersons = document.getElementById('numPersons').value;
-    var selectedOptNumDinners = document.getElementById('numDinners').value;
+        numPersons = document.getElementById('numPersons').value,
+        selectedOptNumDinners = document.getElementById('numDinners').value;
 
     if (numPersons >= 5) {
         pricePrUnit = 70;
@@ -64,7 +46,8 @@ function calculatePrice() {
 }
 
 function update() {
-    var price, validation;
+    "use strict";
+    var price, validation, printedPrice;
 
     price = calculatePrice();
 
@@ -74,24 +57,25 @@ function update() {
 
     if (validation) {
 
-        var printedPrise = document.getElementById('printedPrice');
+        printedPrice = document.getElementById('printedPrice');
 
-        printedPrise.innerHTML = price;
+        printedPrice.innerHTML = price;
     }
 
-    if (debug) console.log("Enter function 'update'");
+    if (debug) {console.log("Enter function 'update'"); }
 }
 
 function save() {
+    "use strict";
 
-    var firstname = prompt("Fakureringsinfo: Fornavn");
-    var lastname = prompt("Fakureringsinfo: Etternavn");
+    var firstname = prompt("Fakureringsinfo: Fornavn"),
+        lastname = prompt("Fakureringsinfo: Etternavn"),
 
-    var address = prompt("Fakureringsinfo: Addresse");
+        address = prompt("Fakureringsinfo: Addresse"),
 
-    var numPersons = document.getElementById('numPersons').value;
+        numPersons = document.getElementById('numPersons').value,
 
-    var numDinners = document.getElementById('numDinners').value;
+        numDinners = document.getElementById('numDinners').value;
 
     sessionStorage.price = calculatePrice();
     sessionStorage.numPersons = numPersons;
@@ -102,3 +86,23 @@ function save() {
 
     window.location.href = 'review.html';
 }
+// Function listening for changes.
+function listenForChange() {
+    "use strict";
+    var dropdownNumDinners = document.getElementById('numDinners'),
+        numPersons = document.getElementById('numPersons'),
+        btn = document.getElementById('btn');
+
+    dropdownNumDinners.addEventListener("change", update);
+    numPersons.addEventListener("change", update);
+    btn.addEventListener("click", save);
+
+
+
+    if (debug) {console.log("Enter function 'listenForChange'"); }
+}
+document.addEventListener('DOMContentLoaded', function () {
+    "use strict";
+    update();
+    listenForChange();
+});
