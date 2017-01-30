@@ -76,7 +76,7 @@ body {
 
     height: auto;
     float: left;
-    background-image: url(images/block-paper.png);
+    background-image: url(../images/block-paper.png);
     padding: 0px 25px 25px 25px;
     border-radius: 20px;
 }
