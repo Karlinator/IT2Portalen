@@ -6,62 +6,28 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/navbar.css" />
     <script src="main.js"></script>
 </head>
 
 <body>
-  <div class="navbar">
-      <ul>
-          <li><a href="index.html">Fra fjord til bord</a></li>
-          <li><a href=""></a></li>
-          <li class="right"><a href="">Backend</a></li>
-      </ul>
-  </div>
+    <div class="navbar">
+        <ul>
+            <li><a href="index.html">Fra fjord til bord</a></li>
+            <li><a href="order.html">Matkasse</a></li>
+            <li class="right"><a href="backend/index.html">Backend</a></li>
+        </ul>
+    </div>
 
-  <div class="spacing"></div>
+    <div class="spacing"></div>
 
 
     <div class="container">
-      <div class="video">
-          <video width="600" height="" autoplay="true">
-              <source src="intro.mp4" type="video/mp4">
-          </video>
-      </div>
-
-        <div class="wrap">
-            <div class="matkasse">
-                <center>
-                    <h1 class="heading_h1">Matkasse</h1>
-
-                    <img id="bilde" src="images/2middager.jpg" alt="Fant ikke bildefilen" width="300px;">
-                    <br><br>
-                </center>
-
-                <!-- select number of dinners -->
-                Antall middager:
-                <select id="numDinners" class="field" name="Antall middager">
-                    <option value="2">2 Middager</option>
-                    <option value="3">3 Middager</option>
-                </select>
-                <br>
-                <!-- select number of persons -->
-                Antall personer:
-                <input id="numPersons" class="field" type="number" name="Antall personer" value="1" placeholder="personer">
-                <br>
-                <br>
-                <center>
-                    <span class="discountTag"><b>Akkuratt nå - 10% rabatt!</b><br>
-                  *Gjelder bestillinger for 5 eller flere personer.</span>
-                    <div class="price">
-                        <span id="printedPrice">0</span>,-
-                    </div>
-                    <br>
-                    <button id="btn" class="btn">Bestill</button>
-                </center>
-            </div>
-
+            <div class="video">
+                <video width="50%" height="" autoplay="true">
+                  <source src="intro.mp4" type="video/mp4">
+              </video>
         </div>
     </div>
 </body>
