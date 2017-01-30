@@ -8,7 +8,7 @@ function validate() {
     var numPersons = document.getElementById('numPersons').value;
 
     if (numPersons > 10 || numPersons < 1) {
-        window.alert("Velg middag for et antall personer mellom 1 - 10");
+        window.alert("Velg middag for et antall personer mellom 1 og 10");
     } else {
         return true;
     }
