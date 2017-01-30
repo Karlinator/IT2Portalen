@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> HEY HO! </title>
+</head>
+
+
+<script>
+
+    window.onload = function viewDidLoad() {
+
+      calculateGrades();
+    }
+
+    // var subjects = ["Engelsk","Geografi","Historie VG3","Kroppsøving VG3","Naturfag",
+    // "Matematikk Vg1, Vg2 (eller x fag)","Norsk hovedmål, skriftlig Vg3","Norsk sidemål, skriftlig Vg3",
+    // "Norsk, muntlig Vg3","Religion og etikk","Samfunnsfag i videregående opplæring"];
+
+    var subjects = ["Engelsk","Geografi","Historie VG3"];
+
+    var grades = [];
+    var numOfGRades = 3;
+    var points;
+
+    function calculateGrades() {
+      for (var i = 0; i < numOfGRades; i++) {
+        var g = document.getElementById("c"+i).value;
+        grades.push(g);
+        console.log(grades);
+
+        points += g * 10;
+      }
+
+    }
+
+</script>
+
+<style>
+    body {
+        background-color: #fff;
+        color: #000;
+    }
+</style>
+
+<body>
+
+    <table id="table">
+        <tr>
+            <th>Fag</th>
+            <th>Karakter</th>
+        </tr>
+        <tr>
+            <td>Engelsk</td>
+            <td><input type="number" id="c0" value="5"></td>
+        </tr>
+        <tr>
+            <td>Geografi</td>
+            <td><input type="number" id="c1" value="6"></td>
+        </tr>
+        <tr>
+            <td>Historie VG3</td>
+            <td><input type="number" id="c2" value="6"></td>
+        </tr>
+
+    </table>
+
+</body>
+
+</html>
