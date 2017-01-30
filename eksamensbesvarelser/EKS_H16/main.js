@@ -68,10 +68,10 @@ function update() {
 function save() {
     "use strict";
 
-    var firstname = prompt("Fakureringsinfo: Fornavn"),
-        lastname = prompt("Fakureringsinfo: Etternavn"),
+    var firstname = prompt("Faktureringsinfo: Fornavn"),
+        lastname = prompt("Faktureringsinfo: Etternavn"),
 
-        address = prompt("Fakureringsinfo: Addresse"),
+        address = prompt("Faktureringsinfo: Addresse"),
 
         numPersons = document.getElementById('numPersons').value,
 
@@ -84,7 +84,7 @@ function save() {
     sessionStorage.lastname = lastname;
     sessionStorage.address = address;
 
-    window.location.href = 'review.html';
+    window.location.href = 'receipt.html';
 }
 // Function listening for changes.
 function listenForChange() {
