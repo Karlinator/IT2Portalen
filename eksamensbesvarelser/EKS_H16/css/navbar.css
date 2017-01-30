@@ -1,5 +1,5 @@
 .spacing {
-    height: 45px;
+    height: auto;
     width: 100%;
     margin-bottom: 20px;
 }
@@ -16,7 +16,7 @@
     padding-left: 30px;
     padding-right: 30px;
     overflow: hidden;
-    background-color: #D0E2E0;
+    background-color: #4356b0;
 }
 
 .navbar li {
@@ -29,12 +29,12 @@
 
 .navbar li a {
     display: block;
-    color: #003333;
+    color: #fff;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
 }
 
 .navbar li a:hover {
-    background-color: #b3cccc;
+    background-color: #3c4d9e;
 }
