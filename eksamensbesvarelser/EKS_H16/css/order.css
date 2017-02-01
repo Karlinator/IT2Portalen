@@ -1,0 +1,135 @@
+body {
+    margin: 0px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    color: #000;
+}
+
+.nav {
+    padding: 35px 0 20px;
+    margin-bottom: 10px;
+}
+
+.nav ul.links {
+    float: right;
+    padding: 0;
+    margin: 2px 0 0;
+}
+
+.nav ul.links>li {
+    display: inline-block;
+    margin-left: 20px;
+    font-size: 13px;
+    font-weight: bold;
+    list-style-type: none;
+}
+
+.nav ul.links>li a {
+    color: #999;
+    vertical-align: middle;
+}
+
+.nav .logo {
+    width: auto;
+    height: 30px;
+}
+
+.nav .logo a {
+    color: #999;
+    font-size: 23px;
+    font-weight: lighter;
+    position: absolute;
+    margin-left: 5px;
+}
+
+.nav .logo a .bold {
+    font-weight: normal;
+}
+
+.container {
+    width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.5;
+}
+
+.wrap {
+    max-width: 325px;
+    padding: 0 15px;
+    margin: 0 auto;
+    margin-top: 25px;
+    min-height: 700px;
+
+}
+
+.content {
+    width: 650px;
+    padding-bottom: 30px;
+    font-size: 18px;
+}
+
+.matkasse {
+    width: 325px;
+    min-height: 500px;
+    margin: 0 auto;
+
+    height: auto;
+    float: left;
+    background-image: url(../images/block-paper.png);
+    padding: 0px 25px 25px 25px;
+    border-radius: 20px;
+}
+
+.matkasse h1 {
+  font-weight: 500;
+}
+
+.matkasse .field {
+    width: 100px;
+    margin: 0px 5px;
+}
+
+.discountTag {
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.price {
+
+    font-size: 3.5em;
+}
+
+.btn {
+    letter-spacing: 1px;
+    padding: 8px 25px 5px;
+    transition: all .2s ease-in;
+    border-radius: 3px;
+    color: #FFF;
+    background: #ff8d6b;
+    box-shadow: 0 3px 0 0 #b26047;
+    border-color: transparent;
+    font-weight: normal;
+    font-size: 1em;
+    width: 200px;
+
+}
+
+.btn:hover {
+    color: #000;
+    letter-spacing: 1px;
+    font-size: 18px;
+    background: #f7a489;
+    box-shadow: 0 3px 0 0 #b17461;
+    border-color: transparent;
+    padding: 8px 25px 5px;
+}
+
+.btn:active {
+    background: #d08871;
+    box-shadow: 0 3px 0 0 #774e41;
+}
+
+.orderDetails {
+
+}
