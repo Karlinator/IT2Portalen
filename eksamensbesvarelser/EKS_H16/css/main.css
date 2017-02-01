@@ -5,6 +5,10 @@ body {
     color: #000;
 }
 
+a {
+  text-decoration: none;
+}
+
 .nav {
     padding: 35px 0 20px;
     margin-bottom: 10px;
@@ -54,12 +58,34 @@ body {
     line-height: 1.5;
 }
 
+.video {
+    width: 100%;
+    background-color: #000;
+    max-height: 394px;
+}
+
+.heading {
+    height: 150px;
+    width: 100%;
+    background-color: #8A94C4;
+    font-size: 30px;
+
+}
+
+.heading_text {
+  margin: 0 auto;
+  padding-top: 40px;
+  font-size: 50px;
+  width: 390px;
+  color: #fff;
+font-weight: bold;
+  vertical-align: middle;
+}
+
 .wrap {
-    max-width: 325px;
+    width: 700px;
     padding: 0 15px;
     margin: 0 auto;
-    margin-top: 25px;
-    min-height: 700px;
 
 }
 
@@ -69,17 +95,39 @@ body {
     font-size: 18px;
 }
 
-.matkasse {
-    width: 325px;
-    min-height: 500px;
-    margin: 0 auto;
+.orderBtn {
+      letter-spacing: 1px;
+      padding: 8px 25px 5px;
+      transition: all .2s ease-in;
+      border-radius: 3px;
+      color: #FFF;
+      background: #ff8d6b;
+      box-shadow: 0 3px 0 0 #b26047;
+      border-color: transparent;
+      font-weight: normal;
+      font-size: 1em;
+      width: 200px;
+      text-decoration: none;
 
-    height: auto;
-    float: left;
-    background-image: url(../images/block-paper.png);
-    padding: 0px 25px 25px 25px;
-    border-radius: 20px;
-}
+
+  }
+
+  .orderBtn:hover {
+      color: #000;
+      letter-spacing: 1px;
+      font-size: 18px;
+      background: #f7a489;
+      box-shadow: 0 3px 0 0 #b17461;
+      border-color: transparent;
+      padding: 8px 25px 5px;
+  }
+
+  .orderBtn:active {
+      background: #d08871;
+      box-shadow: 0 3px 0 0 #774e41;
+  }
+
+
 
 .matkasse h1 {
   font-weight: 500;
@@ -98,38 +146,4 @@ body {
 .price {
 
     font-size: 3.5em;
-}
-
-.btn {
-    letter-spacing: 1px;
-    padding: 8px 25px 5px;
-    transition: all .2s ease-in;
-    border-radius: 3px;
-    color: #FFF;
-    background: #ff8d6b;
-    box-shadow: 0 3px 0 0 #b26047;
-    border-color: transparent;
-    font-weight: normal;
-    font-size: 1em;
-    width: 200px;
-
-}
-
-.btn:hover {
-    color: #000;
-    letter-spacing: 1px;
-    font-size: 18px;
-    background: #f7a489;
-    box-shadow: 0 3px 0 0 #b17461;
-    border-color: transparent;
-    padding: 8px 25px 5px;
-}
-
-.btn:active {
-    background: #d08871;
-    box-shadow: 0 3px 0 0 #774e41;
-}
-
-.orderDetails {
-
 }
