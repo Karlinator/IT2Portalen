@@ -10,6 +10,7 @@ function $(i) {
 //Takes the input and stores it, as well as updating the table.
 function addRow() {
     "use strict";
+
     //Retrieves the input.
     var week, dinners, children, youth, adults, newOrder;
     week = $("#week").value;
@@ -17,11 +18,14 @@ function addRow() {
     children = $("#children").value;
     youth = $("#youth").value;
     adults = $("#adults").value;
+
     //Logs to the console. Iseful for finding errors.
     if (debug) {console.log(week); }
+
     //Stores the newly inputted order into an array of objects.
     newOrder = {'week': week, 'dinners': dinners, 'children': children, 'youth': youth, 'adults': adults};
     orders.push(newOrder);
+
     //Adds the new order as a row on the bottom of the table.
     $("#dinnerTable table").insertAdjacentHTML('beforeend', '<tr><td>' + newOrder.week + '</td><td>' + newOrder.dinners + '</td><td>' + newOrder.children + '</td><td>' + newOrder.youth + '</td><td>' + newOrder.adults + '</td></tr>');
 }
