@@ -6,45 +6,51 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="style.css" />
-    <script src="main.js"></script>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/navbar.css" />
+    <script src="js/main.js"></script>
 </head>
 
 <body>
+    <div class="navbar">
+        <ul>
+            <li><a href="index.html">Fra fjord til bord</a></li>
+            <li><a href="order.html">Matkasse</a></li>
+            <li class="right"><a href="backend/index.html">Backend</a></li>
+        </ul>
+    </div>
+
+    <div class="spacing"></div>
+
+      <div class="heading">
+<div class="heading_text">
+        Fra fjord til bord
+    </div>
+      </div>
+
+
+
+<div class="video">
     <div class="container">
-        <div class="wrap">
-            <div class="matkasse">
-                <center>
-                    <h1 class="heading_h1">Matkasse</h1>
-
-                    <img id="bilde" src="images/2middager.jpg" alt="Fant ikke bildefilen" width="300px;">
-                    <br><br>
-                </center>
-
-                <!-- select number of dinners -->
-                Antall middager:
-                <select id="numDinners" class="field" name="Antall middager">
-                    <option value="2">2 Middager</option>
-                    <option value="3">3 Middager</option>
-                </select>
-                <br>
-                <!-- select number of persons -->
-                Antall personer:
-                <input id="numPersons" class="field" type="number" name="Antall personer" value="1" placeholder="personer">
-                <br>
-                <br>
-                <center>
-                    <span class="discountTag"><b>Akkurat nå - 10% rabatt!</b><br>
-                  *Gjelder bestillinger for 5 eller flere personer.</span>
-                    <div class="price">
-                        <span id="printedPrice">0</span>,-
-                    </div>
-                    <br>
-                    <button id="btn" class="btn">Bestill</button>
-                </center>
             </div>
+        </div>
+    </div>
+<br>
+<br>
+<br>
+    <div class="container">
+      <div class="wrap">
+        <center>
+<a href="order.html">
+        <div class="orderBtn">
+Bestill din matkasse <b>her</b>!
+
 
         </div>
+        </a>
+</center>
+      </div>
+
     </div>
 </body>
 
