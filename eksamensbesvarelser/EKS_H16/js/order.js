@@ -1,5 +1,27 @@
+window.onload = startup;
+
 /*global console, prompt*/
 var debug = true;
+
+function startup() {
+    update();
+    listenForChange();
+}
+
+// Function listening for changes.
+function listenForChange() {
+    var dropdownNumDinners = document.getElementById('numDinners');
+    var numPersons = document.getElementById('numPersons');
+    var btn = document.getElementById('btn');
+
+    dropdownNumDinners.addEventListener("change", update);
+    numPersons.addEventListener("change", update);
+    btn.addEventListener("click", save);
+
+
+
+    if (debug) console.log("Enter function 'listenForChange'");
+}
 
 function validate() {
     "use strict";
@@ -18,7 +40,7 @@ function updateImg() {
     "use strict";
     var img = document.getElementById('bilde'),
 
-        dropdownNumDinners = document.getElementById('numDinners').value;
+        dropdownNumDinners = Number(document.getElementById('numDinners').value);
 
     if (dropdownNumDinners === 2) {
         img.src = "images/2middager.jpg";

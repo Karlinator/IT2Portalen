@@ -1,0 +1,18 @@
+
+function beregn {
+	if (uketall= valgt uketall) {
+		var ordrerDenneUke=antall bestillinger denne uke, i = 0, krabbe = 0, torsk = 0, laks = 0
+		var voksne = antall voksne på denne bestilling
+		var ungdom = antall ungom på denne bestilling
+		var barn = antall barn på denne bestilling
+		var middager = antall middager på denne bestilling
+
+		for(i; i < ordrerDenneUke.length; i += 1){
+ 		 krabbe += 300 * ordrerDenneUke[i].barn + 500 * ordrerDenneUke[i].ungdom + 600 * ordrerDenneUke[i].voksne;
+       		 torsk += 200 * ordrerDenneUke[i].barn + 300 * ordrerDenneUke[i].ungdom + 350 * OrdrerDenneUke[i].voksne;
+
+		 if (antall på middager denne bestilling === 3){
+		  laks += 200 * ordrerDenneUke[i].barn + 300 * ordrerDenneUke[i].ungdom + 350 * OrdrerDenneUke[i].voksne;
+		 }
+		}
+}
