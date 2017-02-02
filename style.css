@@ -230,7 +230,29 @@ a {
     margin-left: 75px;
 }
 
+.listEKS a {
+    margin-right: 48px;
+    color: #444;
+}
+.content table {
+  width: 650px;
+  table-layout: fixed;
 
+}
+.download-table {
+    max-width: 650px;
+}
+
+.download-table td {
+    padding: 0 10px;
+    width: auto;
+    word-wrap:break-word
+
+}
+
+.listEKS a:hover {
+    text-decoration: underline;
+}
 
 footer {
     padding-top: 20px;
