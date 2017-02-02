@@ -160,8 +160,10 @@ a {
 }
 
 .sidebar {
+    z-index: 100;
     float: right;
     width: 200px;
+    top: 0px;
 }
 
 .sidebar ol {
