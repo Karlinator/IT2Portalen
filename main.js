@@ -6,32 +6,6 @@ var orders = [],
 //WARNING! If you need to get more than one object with a certain class, you must manually use document.querySelectorAll() instead
 window.onload = parallex;
 
-function $(i) {
-    "use strict";
-    return document.querySelector(i);
-}
-document.addEventListener('DOMContentLoaded', function() {
-    "use strict";
-
-});
-
-
-function moveSidebar() {
-    // Set this variable with the height of your sidebar + header
-
-    $("window").scroll(function() {
-        if ($("window").scrollTop() > offsetPixels) {
-            $(".sidebar").css({
-                "position": "fixed",
-                "top": "15px"
-            });
-        } else {
-            $(".sidebar").css({
-                "position": "static"
-            });
-        }
-    });
-}
 
 	var ypos;
   var offsetPixels = 370 - 15;
@@ -40,21 +14,13 @@ function moveSidebar() {
 		ypos = window.pageYOffset;
 
     if (ypos > offsetPixels) {
-      $(".sidebar").style.top = 15 + 'px';
-      $(".sidebar").style.right = '50%';
-      $(".sidebar").style.position = 'fixed';
-      $(".sidebar").style.transform = 'translateX(480px)';
+      $(".sidebar").css({"top": "15px", "right": "50%", "position": "fixed", "transform": "translateX(480px)"});
 
     } else {
 
-      $(".sidebar").style.position = 'relative';
-      $(".sidebar").style.top = "";
-      $(".sidebar").style.right = '';
-      $(".sidebar").style.transform = '';
+    $(".sidebar").css({"top": "", "right": "", "position": "static", "transform": ""});
     }
   }
-
-  window.addEventListener('scroll', parallex, false);
 
 
 function sidebarSetActive(element) {
