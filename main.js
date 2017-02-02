@@ -4,17 +4,21 @@ var orders = [],
     debug = true;
 //Implements $ as a shorthand for document.querySelector() (or document.getElementById/Class). It takes a CSS selector and returns the first object.
 //WARNING! If you need to get more than one object with a certain class, you must manually use document.querySelectorAll() instead
-window.onload = parallex;
+window.onload = sidebar;
 
+function sidebar() {
+
+  "use strict";
 
 	var ypos;
   var offsetPixels = 370 - 15;
 
-	function parallex() {
+
+	function moveSidebar() {
 		ypos = window.pageYOffset;
 
     if (ypos > offsetPixels) {
-      $(".sidebar").css({"top": "15px", "right": "50%", "position": "fixed", "transform": "translateX(480px)"});
+      $(".sidebar").css({"top": "15 + px", "right": "50%", "position": "fixed", "transform": "translateX(480px)"});
 
     } else {
 
@@ -22,17 +26,67 @@ window.onload = parallex;
     }
   }
 
+  window.addEventListener("scroll", moveSidebar);
 
-function sidebarSetActive(element) {
+
+  $('a').click(function(){
+      $('html, body').animate({
+          scrollTop: $( $(this).attr('href') ).offset().top
+      }, 500);
+      return false;
+  });
+
+
+function sidebarSetActive(id) {
   $(".active").removeClass("active");
 
-  element.addClass("active");
-console.log(element);
+  var eIdHref = id;
+  $('a[href="' + eIdHref + '\"]').addClass("active");
+  console.log(eIdHref);
 }
 
-  var waypointAnchorEKS_H16 = new Waypoint({
-    element: $('#anchorEKS_H16'),
-    handler: function() {
-      sidebarSetActive(element);
-    }
-  });
+
+
+var topAnchor = $('#topAnchor');
+topAnchor.waypoint(function() {
+    sidebarSetActive('#topAnchor');
+});
+
+var anchorEksløsninger = $('#anchorEksløsninger');
+anchorEksløsninger.waypoint(function() {
+    sidebarSetActive('#anchorEksløsninger');
+});
+
+var anchorEKS_H16 = $('#anchorEKS_H16');
+anchorEKS_H16.waypoint(function() {
+    sidebarSetActive('#anchorEKS_H16');
+});
+
+var anchorEKS_H15 = $('#anchorEKS_H15');
+anchorEKS_H15.waypoint(function() {
+    sidebarSetActive('#anchorEKS_H15');
+});
+
+var anchorEKS_V15 = $('#anchorEKS_V15');
+anchorEKS_V15.waypoint(function() {
+    sidebarSetActive('#anchorEKS_V15');
+});
+
+var anchorEKS_H14 = $('#anchorEKS_H14');
+anchorEKS_H14.waypoint(function() {
+    sidebarSetActive('#anchorEKS_H14');
+});
+
+var anchorEKS_V14 = $('#anchorEKS_V14');
+anchorEKS_V14.waypoint(function() {
+    sidebarSetActive('#anchorEKS_V14');
+});
+
+var anchorEksdownload = $('#anchorEksdownload');
+anchorEksdownload.waypoint(function() {
+    sidebarSetActive('#anchorEksdownload');
+});
+
+
+
+}
