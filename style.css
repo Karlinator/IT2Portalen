@@ -76,6 +76,11 @@ a {
     background-image: url(images/pattern_blue_circles.svg);
 }
 
+.heading_background_tips {
+    height: 225px;
+    background-image: url(images/pattern_pink_waves.svg);
+}
+
 .heading_background {
     height: 225px;
     background-image: url(images/pattern_circles.svg);
@@ -151,6 +156,7 @@ a {
     width: 650px;
     padding-bottom: 30px;
     font-size: 18px;
+    min-height: 225px;
 }
 
 .sidebar {
@@ -180,6 +186,51 @@ a {
     font-weight: bold;
     color: #444;
 }
+
+.sidebar ol>li a:hover, .sidebar ol>ul>li a:hover {
+    text-decoration: underline;
+
+}
+
+.sidebar ol>ul>li {
+  padding: 5px 0;
+  margin: 0;
+  line-height: 1.1em;
+  font-size: 14px;
+}
+
+.sidebar ol>ul>li a {
+    color: #2c5d8d;
+    text-decoration: none;
+}
+
+.icon-container-large {
+    width: 100%;
+    height: 300px;
+}
+
+.icon-container-large a {
+    color: #444;
+}
+
+.icon-container-large a:hover {
+    text-decoration: underline;
+    text-decoration-color: #000;
+}
+
+.icon-desktop-download {
+    float: right;
+    margin-right: 75px;
+    width: 210px;
+}
+
+.icon-file-code {
+    float: left;
+    width: 160px;
+    margin-left: 75px;
+}
+
+
 
 footer {
     padding-top: 20px;
