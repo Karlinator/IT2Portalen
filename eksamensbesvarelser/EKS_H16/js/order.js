@@ -43,9 +43,9 @@ function updateImg() {
         dropdownNumDinners = Number(document.getElementById('numDinners').value);
 
     if (dropdownNumDinners === 2) {
-        img.src = "images/2middager.jpg";
+        img.src = "images/2middager.png";
     } else {
-        img.src = "images/3middager.jpg";
+        img.src = "images/3middager.png";
     }
 }
 

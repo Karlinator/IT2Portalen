@@ -278,6 +278,10 @@ a {
     border-radius: 3px;
 }
 
+.code-block a {
+  color: #444;
+}
+
 footer {
     padding-top: 20px;
     padding-bottom: 20px;
