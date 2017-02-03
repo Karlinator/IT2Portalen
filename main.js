@@ -4,9 +4,8 @@ var orders = [],
     debug = true;
 //Implements $ as a shorthand for document.querySelector() (or document.getElementById/Class). It takes a CSS selector and returns the first object.
 //WARNING! If you need to get more than one object with a certain class, you must manually use document.querySelectorAll() instead
-window.onload = sidebar;
 
-function sidebar() {
+function startup() {
 
   "use strict";
 
