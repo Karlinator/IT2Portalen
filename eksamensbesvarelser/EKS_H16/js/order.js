@@ -25,7 +25,9 @@ function listenForChange() {
 
 function validate() {
     "use strict";
-    if (debug) {console.log("Enter function 'validate'." + " Validation passed"); }
+    if (debug) {
+        console.log("Enter function 'validate'." + " Validation passed");
+    }
 
     var numPersons = document.getElementById('numPersons').value;
 
@@ -84,29 +86,34 @@ function update() {
         printedPrice.innerHTML = price;
     }
 
-    if (debug) {console.log("Enter function 'update'"); }
+    if (debug) {
+        console.log("Enter function 'update'");
+    }
 }
 
 function save() {
     "use strict";
 
-    var firstname = prompt("Fakureringsinfo: Fornavn"),
-        lastname = prompt("Fakureringsinfo: Etternavn"),
+    if (validate()) {
 
-        address = prompt("Fakureringsinfo: Addresse"),
+        var firstname = prompt("Fakureringsinfo: Fornavn"),
+            lastname = prompt("Fakureringsinfo: Etternavn"),
 
-        numPersons = document.getElementById('numPersons').value,
+            address = prompt("Fakureringsinfo: Addresse"),
 
-        numDinners = document.getElementById('numDinners').value;
+            numPersons = document.getElementById('numPersons').value,
 
-    sessionStorage.price = calculatePrice();
-    sessionStorage.numPersons = numPersons;
-    sessionStorage.numDinners = numDinners;
-    sessionStorage.firstname = firstname;
-    sessionStorage.lastname = lastname;
-    sessionStorage.address = address;
+            numDinners = document.getElementById('numDinners').value;
 
-    window.location.href = 'review.html';
+        sessionStorage.price = calculatePrice();
+        sessionStorage.numPersons = numPersons;
+        sessionStorage.numDinners = numDinners;
+        sessionStorage.firstname = firstname;
+        sessionStorage.lastname = lastname;
+        sessionStorage.address = address;
+
+        window.location.href = 'receipt.html';
+    }
 }
 // Function listening for changes.
 function listenForChange() {
@@ -121,9 +128,11 @@ function listenForChange() {
 
 
 
-    if (debug) {console.log("Enter function 'listenForChange'"); }
+    if (debug) {
+        console.log("Enter function 'listenForChange'");
+    }
 }
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function() {
     "use strict";
     update();
     listenForChange();
