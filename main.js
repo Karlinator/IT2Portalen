@@ -1,8 +1,3 @@
-document.addEventListener("DOMContentLoaded", function(event) {
-    startup();
-});
-
-
 var orders = [],
     debug = true;
 
@@ -90,3 +85,9 @@ anchorEksdownload.waypoint(function() {
 
 
 }
+
+//Runs when the document is loaded. Initialises the script.
+document.addEventListener('DOMContentLoaded', function() {
+    "use strict";
+    startup();
+});

@@ -1,5 +1,3 @@
-window.onload = startup;
-
 /*global console, prompt*/
 var debug = true;
 
@@ -137,4 +135,10 @@ document.addEventListener('DOMContentLoaded', function() {
     "use strict";
     update();
     listenForChange();
+});
+
+//Runs when the document is loaded. Initialises the script.
+document.addEventListener('DOMContentLoaded', function() {
+    "use strict";
+    startup();
 });

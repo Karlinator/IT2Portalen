@@ -1,7 +1,3 @@
-document.addEventListener("DOMContentLoaded", function(event) {
-    generateFooter();
-});
-
 function generateFooter() {
 
 var footer;
@@ -25,3 +21,9 @@ document.getElementsByTagName('head')[0].appendChild(style);
 
 document.querySelector('footer').innerHTML = footer;
 }
+
+//Runs when the document is loaded. Initialises the script.
+document.addEventListener('DOMContentLoaded', function() {
+    "use strict";
+    generateFooter();
+});

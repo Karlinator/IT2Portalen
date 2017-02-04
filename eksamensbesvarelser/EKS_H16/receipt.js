@@ -29,6 +29,7 @@ function loadEntries() {
     //Logs in the console. Useful for finding errors.
     if (debug) {console.log("Enter function 'updateHTML'"); }
 }
+
 //Runs when the document is loaded. Initialises the script.
 document.addEventListener('DOMContentLoaded', function () {
     "use strict";
