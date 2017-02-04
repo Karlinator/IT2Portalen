@@ -1,3 +1,7 @@
+document.addEventListener("DOMContentLoaded", function(event) {
+    generateFooter();
+});
+
 function generateFooter() {
 
 var footer;
