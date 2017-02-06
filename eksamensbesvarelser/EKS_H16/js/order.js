@@ -33,9 +33,9 @@ function updateImg() {
 
     //Sets the correct image for two or three dinners.
     if (dropdownNumDinners === 2) {
-        img.src = "images/2middager.jpg";
+        img.src = "images/2middager.png";
     } else {
-        img.src = "images/3middager.jpg";
+        img.src = "images/3middager.png";
     }
 }
 
