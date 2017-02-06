@@ -13,6 +13,12 @@ function validate() {
     //Gives a popup error if the number of people in the input field is greater than 10 or less than 1.
     if (numPersons > 10 || numPersons < 1) {
         window.alert("Velg middag for et antall personer mellom 1 og 10");
+        if (numPersons > 10) {
+            document.querySelector('#numPersons').value = 10;
+        } else if (numPersons < 1) {
+            document.querySelector('#numPersons').value = 1;
+        }
+        return false;
     } else {
         return true;
     }
