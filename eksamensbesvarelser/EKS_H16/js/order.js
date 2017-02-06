@@ -32,7 +32,7 @@ function updateImg() {
         dropdownNumDinners = document.getElementById('numDinners').value;
 
     //Sets the correct image for two or three dinners.
-    if (dropdownNumDinners === 2) {
+    if (dropdownNumDinners === '2') {
         img.src = "images/2middager.png";
     } else {
         img.src = "images/3middager.png";
