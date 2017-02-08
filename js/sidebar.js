@@ -1,15 +1,9 @@
 var orders = [],
     debug = true;
 
-function startup() {
-    "use strict";
-    initWaypoints();
-}
 
-
-var ypos;
-var offsetPixels = 370 - 15;
-
+var ypos,
+    offsetPixels = 370 - 15;
 
 function stickySidebar() {
     ypos = window.pageYOffset;
@@ -75,5 +69,5 @@ function initWaypoints() {
 //Runs when the document is loaded. Initialises the script.
 document.addEventListener('DOMContentLoaded', function() {
     "use strict";
-    startup();
+    initWaypoints();
 });

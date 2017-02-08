@@ -1,9 +1,5 @@
 var debug = true;
 
-function startup() {
-    scrollingEffect();
-}
-
 
 function scrollingEffect() {
     // Scrolling effect
@@ -18,5 +14,5 @@ function scrollingEffect() {
 //Runs when the document is loaded. Initialises the script.
 document.addEventListener('DOMContentLoaded', function() {
     "use strict";
-    startup();
+    scrollingEffect();
 });
